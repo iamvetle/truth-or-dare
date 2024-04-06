@@ -1,48 +1,44 @@
 <template>
-  <div class="bg-gray-50 w-full min-h-screen pt-12 px-2">
+  <div class="bg-[#F0EDCC] w-full min-h-screen pt-12 px-2">
 
     <div class="flex flex-col mx-auto w-full sm:w-[600px]">
 
       <div class="space-y-2">
-        <h1 class="text-3xl">Truth or dare?</h1>
-        <div class="flex justify-between">
+        <h1 class="text-3xl text-center">Truth or dare?</h1>
+        <!-- <div class="flex justify-between">
           <button
           class="text-sm"
           @click="switchLanguage">Language:</button>
           <span @click="switchLanguage" class="hover:cursor-pointer text-sm">{{ languageText }}</span>
-        </div>
+        </div> -->
       </div>
 
-      <div class="mt-2">
+      <div class="w-96 mx-auto mt-10">
+        <div class="mx-auto bg-white rounded-lg flex items-center justify-start h-64 w-full px-4">
+            <!-- <p>{{ mode }}</p> -->
+            <p v-if="questionText" class="text-lg">{{ questionText }}</p>
+            <p v-else class="w-full text-center text-lg ">...</p>
+            <!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
+          </div>
+        <div class="mt-2">
+          <div class=" text-[#02343F] flex justify-between space-x-2 mt-7 text-sm">
+            <BackButton @back="backToQuestion"
+            />
+            <ForwardButton
 
-        <div class="flex space-x-2 mt-4 text-sm">
-          <BackButton @back="backToQuestion" 
-          class="p-1 bg-gray-200 rounded-md shadow-sm" 
-          />
-
-          <ForwardButton 
-          @forward="forwardToQuestion" 
-          class="p-1 bg-gray-200 rounded-md shadow-sm"
-          />
-        </div>
-
-        <div class="mt-8">
-          <!-- <p>{{ mode }}</p> -->
-          <p>question:</p>
-          <p v-if="theQuestion" class="break-words">{{ questionText }}</p>
-        </div>
-
-
-        <div class="buttons mt-12 flex justify-between">
-          <TruthButton 
-          v-text="language === 'en' ? 'Truth' : 'Sannhet'"
-          class="py-2 px-3 w-[100px] rounded-md shadow-md bg-gray-200"/>
-          <DareButton 
-          v-text="language === 'en' ? 'Dare' : 'Nødt'"
-          class="py-2 px-3 w-[100px] rounded-md shadow-md bg-gray-200"/>
-        </div>
-
-      </div><!-- <pre>{{ theQuestion }}</pre> -->
+            @forward="forwardToQuestion"
+            />
+          </div>
+          <div class="buttons mt-14 flex justify-between">
+            <TruthButton
+            :label="language === 'en' ? 'Truth' : 'Sannhet'"
+            class="text-[#50586C] bg-[#DCE2F0] w-40 h-16 rounded-md shadow-sm"/>
+            <DareButton
+            :label="language === 'en' ? 'Dare' : 'Nødt'"
+            class="text-[#9000FF] bg-[#FFE8F5] w-40 h-16 rounded-md shadow-sm "/>
+          </div>
+        </div><!-- <pre>{{ theQuestion }}</pre> -->
+      </div>
     </div>
   </div>
 

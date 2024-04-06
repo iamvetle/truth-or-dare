@@ -1,8 +1,14 @@
 <template>
-    <button @click="buttonClick" class="p-1 bg-accent-500"></button>
+    <button @click="buttonClick" class="">{{ label }}</button>
 </template>
 
 <script setup lang='ts'>
+
+withDefaults(defineProps<{
+    label:string
+}>(), {
+    label:"Dare"
+});
 
 const { randomDareQuestion } = await useQuestions()
 

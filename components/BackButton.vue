@@ -1,5 +1,5 @@
 <template>
-        <button @click="$emit('back')">Back</button>
+        <button  class="flex space-x-1 items-center" @click="$emit('back')"><BackSVGIcon/><span>Back</span></button>
 </template>
 
 <script setup lang='ts'>
