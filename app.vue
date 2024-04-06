@@ -1,19 +1,19 @@
 <template>
   <div class="bg-gray-50 w-full min-h-screen pt-12 px-2">
 
-    <div class="flex flex-col mx-auto w-full sm:w-[600px] border">
+    <div class="flex flex-col mx-auto w-full sm:w-[600px]">
 
       <div class="space-y-2">
         <h1 class="text-3xl">Truth or dare?</h1>
         <div class="flex justify-between">
           <button
           class="text-sm"
-          @click="switchLanguage">Switch Language</button>
-          <span class="text-sm">{{ languageText }}</span>
+          @click="switchLanguage">Language:</button>
+          <span @click="switchLanguage" class="hover:cursor-pointer text-sm">{{ languageText }}</span>
         </div>
       </div>
 
-      <div class="mt-8">
+      <div class="mt-2">
 
         <div class="flex space-x-2 mt-4 text-sm">
           <BackButton @back="backToQuestion" 
@@ -34,8 +34,12 @@
 
 
         <div class="buttons mt-12 flex justify-between">
-          <TruthButton class="py-2 px-3 rounded-md shadow-md bg-gray-200"/>
-          <DareButton class="py-2 px-3 rounded-md shadow-md bg-gray-200"/>
+          <TruthButton 
+          v-text="language === 'en' ? 'Truth' : 'Sannhet'"
+          class="py-2 px-3 w-[100px] rounded-md shadow-md bg-gray-200"/>
+          <DareButton 
+          v-text="language === 'en' ? 'Dare' : 'Nødt'"
+          class="py-2 px-3 w-[100px] rounded-md shadow-md bg-gray-200"/>
         </div>
 
       </div><!-- <pre>{{ theQuestion }}</pre> -->

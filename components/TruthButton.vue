@@ -1,10 +1,8 @@
 <template>
-    <div>
         <button 
         @click="buttonClick"
         class="p-1 bg-accent-500"
-        >Truth</button>
-    </div>
+        ></button>
 </template>
 
 <script setup lang='ts'>
