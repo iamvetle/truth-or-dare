@@ -4,7 +4,7 @@
     <div class="flex flex-col mx-auto w-full sm:w-[600px]">
 
       <div class="space-y-2">
-        <h1 class="text-3xl text-center">Truth or dare?</h1>
+        <h1 class="text-3xl text-center font-bold">Truth or dare?</h1>
         <!-- <div class="flex justify-between">
           <button
           class="text-sm"
@@ -32,10 +32,10 @@
           <div class="buttons mt-14 flex justify-between">
             <TruthButton
             :label="language === 'en' ? 'Truth' : 'Sannhet'"
-            class="text-[#50586C] bg-[#DCE2F0] w-40 h-16 rounded-md shadow-sm"/>
+            class="font-medium text-[#50586C] bg-[#DCE2F0] w-40 h-16 rounded-md shadow-sm"/>
             <DareButton
             :label="language === 'en' ? 'Dare' : 'Nødt'"
-            class="text-[#9000FF] bg-[#FFE8F5] w-40 h-16 rounded-md shadow-sm "/>
+            class="font-medium text-[#9000FF] bg-[#FFE8F5] w-40 h-16 rounded-md shadow-sm "/>
           </div>
         </div><!-- <pre>{{ theQuestion }}</pre> -->
       </div>
