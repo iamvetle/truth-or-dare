@@ -3,18 +3,21 @@
 
     <div class="flex flex-col mx-auto w-full">
 
-      <div class="space-y-2">
-        <h1 class="text-3xl text-center font-bold">Truth or dare?</h1>
-        <!-- <div class="flex justify-between">
-          <button
-          class="text-sm"
-          @click="switchLanguage">Language:</button>
-          <span @click="switchLanguage" class="hover:cursor-pointer text-sm">{{ languageText }}</span>
-        </div> -->
+      <div class="space-y-2 w-fit mx-auto">
+        <h1 class="text-3xl text-[#02343F] text-center font-bold">Truth or dare?</h1>
+        <div>
+
+        </div>
       </div>
 
       <div class="w-96 mx-auto mt-10">
+        <Language
+          :language="languageText"
+          class="flex mb-2"
+          @switch-language="switchLanguage"
+          />
         <div class="mx-auto bg-white rounded-lg flex items-center justify-start h-64 w-full px-4">
+          
             <!-- <p>{{ mode }}</p> -->
             <p v-if="questionText" class="text-lg">{{ questionText }}</p>
             <p v-else class="w-full text-center text-lg ">...</p>
@@ -60,7 +63,7 @@ const backQuestions = useState<Question[] | []>("backQuestions", () => [])
 // questions to forward to
 const forwardQuestions = useState<Question[] | []>("forwardQuestions", () => [])
 
-const languageText = computed(() => language.value === "en" ? "English" : "Norsk")
+const languageText = computed(() => language.value === "en" ? "english" : "norsk")
 const language = ref<"en" | "no">("en")
 const switchLanguage = () => {
   if (language.value === "en") {
