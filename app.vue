@@ -27,7 +27,7 @@
         </div>
 
         <div class="mt-8">
-          <p>{{ mode }}</p>
+          <!-- <p>{{ mode }}</p> -->
           <p>question:</p>
           <p v-if="theQuestion" class="break-words">{{ questionText }}</p>
         </div>
