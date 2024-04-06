@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#F0EDCC] w-full min-h-screen pt-12 px-2">
 
-    <div class="flex flex-col mx-auto w-full sm:w-[600px]">
+    <div class="flex flex-col mx-auto w-full">
 
       <div class="space-y-2">
         <h1 class="text-3xl text-center font-bold">Truth or dare?</h1>
