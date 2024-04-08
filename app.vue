@@ -7,7 +7,7 @@
       <div></div>
     </div>
 
-    <div class="w-96 mx-auto mt-10 flex flex-col flex-1 justify-between">
+    <div class="max-w-96 mx-auto mt-10 flex flex-col flex-1 justify-between">
       <div>
         <Language :language="languageText" class="flex mb-2" @switch-language="switchLanguage" />
 
