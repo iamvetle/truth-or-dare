@@ -52,7 +52,11 @@ const forwardQuestions = ref<Question[] | []>([])
 const mode = ref<"truth" | "dare">("truth")
 
 
-const { randomTruthQuestion, randomDareQuestion } = await useQuestions()
+const { randomTruthQuestion, randomDareQuestion,fetchAllQuestions } = await useQuestions()
+
+onMounted(async() => {
+  await fetchAllQuestions()
+})
 
 const truthButtonClick = async () => {
   const question = await randomTruthQuestion()
@@ -63,7 +67,6 @@ const truthButtonClick = async () => {
   theQuestion.value = question
 
   mode.value = "truth"
-
 }
 
 const dareButtonClick = async () => {

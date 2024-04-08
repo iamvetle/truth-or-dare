@@ -1,39 +1,81 @@
 type Question = {
-    
         en:string,
         no:string
-    
 }
 
+/**
+ * Various function related to fetching dare and truth questions,
+ * as well as randomizing which ones will be picked.
+ */
 export const useQuestions = async () => {
+    const truthQuestions = ref<Question[] | []>([])
+    const dareQuestions = ref<Question[] | []>([])
 
+
+/**
+ * Fetches all the truth and dare questions
+ */
+    const fetchAllQuestions = async() => {
+    console.log("fetchallquestions is called")
+
+    // * Currently only 25 questions
+    const truthResponse = await $fetch<Question[] | null>("/truthQuestions.json")
+
+    if (truthResponse) {
+        truthQuestions.value = truthResponse
+    }
+
+
+    // * Currently only 25 questions
+    const dareResponse = await $fetch<Question[] | null>("/dareQuestions.json")
+
+    if (dareResponse) {
+        dareQuestions.value = dareResponse
+    }
+}
+
+    /**
+     * Gets a random truth question.
+     * 
+     * Based on the remaining truth questions that have not yet been used.
+     * 
+     * @returns a truth random question
+     */
     const randomTruthQuestion = async () => {
-        const response = await $fetch<Question[]>("/truthQuestions.json")
+        // const response = await $fetch<Question[]>("/truthQuestions.json")
 
-        const numOfQuestions = response.length
+        const numOfQuestions = truthQuestions.value.length
 
         const randomNumber = Math.floor(Math.random() * numOfQuestions)
 
-        const randomQuestion = response[randomNumber]
+        const randomQuestion = truthQuestions.value[randomNumber]
+        truthQuestions.value.splice(randomNumber, 1)
+
+        console.assert(truthQuestions.value.length > 0, "No new truth questions remaining")
 
         return randomQuestion
     }
     
+    /**
+     * Gets a random dare question.
+     * 
+     * Based on the remaining dare questions that have not yet been used.
+     * 
+     * @returns a dare random question
+     */
     const randomDareQuestion = async () => {
-        const response = await $fetch<Question[]>("/dareQuestions.json")
 
-        const numOfQuestions = response.length
+        const numOfQuestions = dareQuestions.value.length
 
         const randomNumber = Math.floor(Math.random() * numOfQuestions)
 
-        const randomQuestion = response[randomNumber]
+        const randomQuestion = dareQuestions.value[randomNumber]
+        dareQuestions.value.splice(randomNumber, 1)
+
+        console.assert(dareQuestions.value.length > 0, "No new dare questions remaining" )
 
         return randomQuestion
     }
 
-    
-
-    // console.log(response)
-
-    return { randomTruthQuestion, randomDareQuestion }
+    return { randomTruthQuestion, randomDareQuestion, fetchAllQuestions }
 }
