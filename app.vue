@@ -22,12 +22,12 @@
 
       </div>
 
-      <div class="mb-56 mt-14 flex justify-between">
+      <div class="mb-56 mt-14 flex justify-between space-x-2">
         <TruthButton :label="language === 'en' ? 'Truth' : 'Sannhet'"
-          class="font-medium text-[#50586C] bg-[#DCE2F0] w-40 h-16 rounded-md shadow-sm"
+          class="font-medium text-[#50586C] bg-[#DCE2F0] max-w-40 w-full h-16 rounded-md shadow-sm"
           @buttonClick="truthButtonClick" />
         <DareButton :label="language === 'en' ? 'Dare' : 'Nødt'"
-          class="font-medium text-[#9000FF] bg-[#FFE8F5] w-40 h-16 rounded-md shadow-sm"
+          class="font-medium text-[#9000FF] bg-[#FFE8F5] max-w-40 w-full h-16 rounded-md shadow-sm"
           @button-click="dareButtonClick" />
       </div>
     </div>
