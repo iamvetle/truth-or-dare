@@ -1,102 +1,405 @@
 [
-    {
-      "en": "Do your best impression of a celebrity and have everyone guess who it is.",
-      "no": "Gjør ditt beste inntrykk av en kjendis og la alle gjette hvem det er."
-    },
-    {
-      "en": "Call a random number from your phone and sing 'Happy Birthday' to whoever answers.",
-      "no": "Ring et tilfeldig nummer fra telefonen din og syng 'Happy Birthday' til den som svarer."
-    },
-    {
-      "en": "Wear socks on your hands for the next three rounds.",
-      "no": "Bruk sokker på hendene dine for de neste tre rundene."
-    },
-    {
-      "en": "Speak in an accent of your choice for the next 10 minutes.",
-      "no": "Snakk med en aksent etter eget valg i de neste 10 minuttene."
-    },
-    {
-      "en": "Do your best dance moves to a song chosen by the group.",
-      "no": "Vis frem dine beste dansebevegelser til en sang valgt av gruppen."
-    },
-    {
-      "en": "Let someone else style your hair however they want.",
-      "no": "La noen andre style håret ditt slik de vil."
-    },
-    {
-      "en": "Send a funny selfie to the fifth person in your contact list.",
-      "no": "Send et morsomt selfie til den femte personen i kontaktlisten din."
-    },
-    {
-      "en": "Do 20 push-ups right now.",
-      "no": "Gjør 20 armhevinger akkurat nå."
-    },
-    {
-      "en": "Eat a spoonful of a condiment (ketchup, mustard, etc.) of the group's choice.",
-      "no": "Spis en skje med et krydder (ketchup, sennep, osv.) valgt av gruppen."
-    },
-    {
-      "en": "Do your best impression of a baby crying.",
-      "no": "Gjør ditt beste inntrykk av en gråtende baby."
-    },
-    {
-      "en": "Do a handstand against the wall for as long as you can.",
-      "no": "Gjør et håndstående mot veggen så lenge du klarer."
-    },
-    {
-      "en": "Put on lipstick (or chapstick) without using your hands.",
-      "no": "Påfør leppestift (eller leppomade) uten å bruke hendene."
-    },
-    {
-      "en": "Tell a joke and try to make everyone laugh.",
-      "no": "Fortell en vits og prøv å få alle til å le."
-    },
-    {
-      "en": "Do a cartwheel across the room.",
-      "no": "Gjør et hjulbrett over rommet."
-    },
-    {
-      "en": "Wear your clothes backward for the rest of the game.",
-      "no": "Ha på deg klærne baklengs resten av spillet."
-    },
-    {
-      "en": "Try to lick your elbow.",
-      "no": "Prøv å slikke albuen din."
-    },
-    {
-      "en": "Do a freestyle rap about the last thing you ate.",
-      "no": "Gjør en freestyle rap om det siste du spiste."
-    },
-    {
-      "en": "Balance a spoon on your nose for one minute.",
-      "no": "Balanser en skje på nesen din i ett minutt."
-    },
-    {
-      "en": "Go outside and yell 'I love [name of someone in the room]' as loud as you can.",
-      "no": "Gå ut og rop 'Jeg elsker [navnet på noen i rommet]' så høyt du kan."
-    },
-    {
-      "en": "Pretend to be a waiter/waitress and take snack orders from everyone in the room.",
-      "no": "Pretend to be a waiter/waitress and take snack orders from everyone in the room."
-    },
-    {
-      "en": "Try to lick your nose.",
-      "no": "Prøv å slikke nesen din."
-    },
-    {
-      "en": "Hop on one foot around the room three times.",
-      "no": "Hopp på ett bein rundt rommet tre ganger."
-    },
-    {
-      "en": "Do an impression of a famous movie character.",
-      "no": "Gjør et inntrykk av en kjent filmkarakter."
-    },
-    {
-      "en": "Try to juggle three items from around the room.",
-      "no": "Prøv å jonglere tre ting fra rommet."
-    },
-    {
-      "en": "Make up a short poem about the person to your left.",
-      "no": "Lag et kort dikt om personen til venstre for deg."
-    }
-  ]
+  {
+    "en": "Do your best impression of a celebrity and have everyone guess who it is.",
+    "no": "Gjør ditt beste inntrykk av en kjendis og la alle gjette hvem det er."
+  },
+  {
+    "en": "Call a random number from your phone and sing 'Happy Birthday' to whoever answers.",
+    "no": "Ring et tilfeldig nummer fra telefonen din og syng 'Happy Birthday' til den som svarer."
+  },
+  {
+    "en": "Wear socks on your hands for the next three rounds.",
+    "no": "Bruk sokker på hendene dine for de neste tre rundene."
+  },
+  {
+    "en": "Speak in an accent of your choice for the next 10 minutes.",
+    "no": "Snakk med en aksent etter eget valg i de neste 10 minuttene."
+  },
+  {
+    "en": "Do your best dance moves to a song chosen by the group.",
+    "no": "Vis frem dine beste dansebevegelser til en sang valgt av gruppen."
+  },
+  {
+    "en": "Let someone else style your hair however they want.",
+    "no": "La noen andre style håret ditt slik de vil."
+  },
+  {
+    "en": "Send a funny selfie to the fifth person in your contact list.",
+    "no": "Send et morsomt selfie til den femte personen i kontaktlisten din."
+  },
+  {
+    "en": "Do 20 push-ups right now.",
+    "no": "Gjør 20 armhevinger akkurat nå."
+  },
+  {
+    "en": "Eat a spoonful of a condiment (ketchup, mustard, etc.) of the group's choice.",
+    "no": "Spis en skje med et krydder (ketchup, sennep, osv.) valgt av gruppen."
+  },
+  {
+    "en": "Do your best impression of a baby crying.",
+    "no": "Gjør ditt beste inntrykk av en gråtende baby."
+  },
+  {
+    "en": "Do a handstand against the wall for as long as you can.",
+    "no": "Gjør et håndstående mot veggen så lenge du klarer."
+  },
+  {
+    "en": "Put on lipstick (or chapstick) without using your hands.",
+    "no": "Påfør leppestift (eller leppomade) uten å bruke hendene."
+  },
+  {
+    "en": "Tell a joke and try to make everyone laugh.",
+    "no": "Fortell en vits og prøv å få alle til å le."
+  },
+  {
+    "en": "Do a cartwheel across the room.",
+    "no": "Gjør et hjulbrett over rommet."
+  },
+  {
+    "en": "Wear your clothes backward for the rest of the game.",
+    "no": "Ha på deg klærne baklengs resten av spillet."
+  },
+  {
+    "en": "Try to lick your elbow.",
+    "no": "Prøv å slikke albuen din."
+  },
+  {
+    "en": "Do a freestyle rap about the last thing you ate.",
+    "no": "Gjør en freestyle rap om det siste du spiste."
+  },
+  {
+    "en": "Balance a spoon on your nose for one minute.",
+    "no": "Balanser en skje på nesen din i ett minutt."
+  },
+  {
+    "en": "Go outside and yell 'I love [name of someone in the room]' as loud as you can.",
+    "no": "Gå ut og rop 'Jeg elsker [navnet på noen i rommet]' så høyt du kan."
+  },
+  {
+    "en": "Pretend to be a waiter/waitress and take snack orders from everyone in the room.",
+    "no": "Pretend to be a waiter/waitress and take snack orders from everyone in the room."
+  },
+  {
+    "en": "Try to lick your nose.",
+    "no": "Prøv å slikke nesen din."
+  },
+  {
+    "en": "Hop on one foot around the room three times.",
+    "no": "Hopp på ett bein rundt rommet tre ganger."
+  },
+  {
+    "en": "Do an impression of a famous movie character.",
+    "no": "Gjør et inntrykk av en kjent filmkarakter."
+  },
+  {
+    "en": "Try to juggle three items from around the room.",
+    "no": "Prøv å jonglere tre ting fra rommet."
+  },
+  {
+    "en": "Make up a short poem about the person to your left.",
+    "no": "Lag et kort dikt om personen til venstre for deg."
+  },
+
+  {
+    "en": "Do the chicken dance for one minute.",
+    "no": "Gjør hønsehoppdansen i ett minutt."
+  },
+  {
+    "en": "Give yourself a temporary tattoo using a pen or marker.",
+    "no": "Gi deg selv en midlertidig tatovering ved å bruke en penn eller tusj."
+  },
+  {
+    "en": "Attempt to breakdance (even if you don't know how).",
+    "no": "Prøv å breakdance (selv om du ikke kan det)."
+  },
+  {
+    "en": "Try to lick your own elbow.",
+    "no": "Prøv å slikke albuen din."
+  },
+  {
+    "en": "Do 10 jumping jacks while saying the alphabet backwards.",
+    "no": "Gjør 10 hoppende jacks mens du sier alfabetet baklengs."
+  },
+  {
+    "en": "Wear socks on your hands and try to eat something.",
+    "no": "Bruk sokker på hendene og prøv å spise noe."
+  },
+  {
+    "en": "Attempt to do a headstand against the wall.",
+    "no": "Prøv å gjøre et hodestående mot veggen."
+  },
+  {
+    "en": "Speak in a high-pitched voice for the next five minutes.",
+    "no": "Snakk med en høy stemme i de neste fem minuttene."
+  },
+  {
+    "en": "Do your best impression of a famous cartoon character.",
+    "no": "Gjør ditt beste inntrykk av en kjent tegneseriefigur."
+  },
+  {
+    "en": "Act out a scene from your favorite movie (without saying what movie it is).",
+    "no": "Spill ut en scene fra din favorittfilm (uten å si hva filmen heter)."
+  },
+  {
+    "en": "Put on lipstick and give yourself a mustache.",
+    "no": "Påfør leppestift og gi deg selv en bart."
+  },
+  {
+    "en": "Do your best impression of a baby trying to walk.",
+    "no": "Gjør ditt beste inntrykk av en baby som prøver å gå."
+  },
+  {
+    "en": "Spin around in circles 10 times and then try to walk in a straight line.",
+    "no": "Spinn rundt i sirkler 10 ganger og prøv deretter å gå rett frem."
+  },
+  {
+    "en": "Make up a short rap about a household item of your choice.",
+    "no": "Lag en kort rap om et husholdningsartikkel etter eget valg."
+  },
+  {
+    "en": "Try to fit as many marshmallows in your mouth as you can.",
+    "no": "Prøv å få plass til så mange marshmallows i munnen som mulig."
+  },
+  {
+    "en": "Do the robot dance for one minute.",
+    "no": "Gjør robotdansen i ett minutt."
+  },
+  {
+    "en": "Pretend to be a news reporter and give a live report about something ridiculous.",
+    "no": "Pretendere å være en nyhetsreporter og gi en direkterapport om noe latterlig."
+  },
+  {
+    "en": "Put on a blindfold and try to guess who each person in the room is by feeling their face.",
+    "no": "Ha på et bind for øynene og prøv å gjette hvem hver person i rommet er ved å føle ansiktet deres."
+  },
+  {
+    "en": "Do 20 jumping jacks while singing the alphabet.",
+    "no": "Gjør 20 hoppende jacks mens du synger alfabetet."
+  },
+  {
+    "en": "Try to lick your own nose.",
+    "no": "Prøv å slikke din egen nese."
+  },
+  {
+    "en": "Put an ice cube down your shirt and leave it there until it melts.",
+    "no": "Legg en isbit ned i skjorten din og la den være der til den smelter."
+  },
+  {
+    "en": "Do your best impression of a famous athlete.",
+    "no": "Gjør ditt beste inntrykk av en kjent idrettsutøver."
+  },
+  {
+    "en": "Put on a pair of socks on your hands and try to text someone.",
+    "no": "Ha på et par sokker på hendene og prøv å sende en tekstmelding til noen."
+  },
+  {
+    "en": "Act like a monkey for the next two rounds.",
+    "no": "Oppfør deg som en ape i de neste to rundene."
+  },
+  {
+    "en": "Do your best impression of a famous politician.",
+    "no": "Gjør ditt beste inntrykk av en kjent politiker."
+  },
+
+  {
+    "en": "Do a silly dance in public for one minute.",
+    "no": "Gjør en tåpelig dans offentlig i ett minutt."
+  },
+  {
+    "en": "Put on a blindfold and try to apply makeup to someone else.",
+    "no": "Ha på et bind for øynene og prøv å sminke noen andre."
+  },
+  {
+    "en": "Sing the chorus of a song chosen by the group in your best opera voice.",
+    "no": "Syng refrenget av en sang valgt av gruppen med din beste operastemme."
+  },
+  {
+    "en": "Go outside and ask a stranger for their autograph.",
+    "no": "Gå ut og be en fremmed om autografen deres."
+  },
+  {
+    "en": "Wear socks on your hands and try to eat a snack.",
+    "no": "Bruk sokker på hendene og prøv å spise en snacks."
+  },
+  {
+    "en": "Do your best impression of a famous superhero.",
+    "no": "Gjør ditt beste inntrykk av en kjent superhelt."
+  },
+  {
+    "en": "Put on a hat and sunglasses and strike a pose for a pretend photoshoot.",
+    "no": "Ta på deg en hatt og solbriller og poser for et forfalsket fotografering."
+  },
+  {
+    "en": "Try to lick your own toe.",
+    "no": "Prøv å slikke din egen tå."
+  },
+  {
+    "en": "Wear your shirt backward for the rest of the game.",
+    "no": "Ha på deg skjorten baklengs resten av spillet."
+  },
+  {
+    "en": "Speak in a funny accent for the next three rounds.",
+    "no": "Snakk med en morsom aksent i de neste tre rundene."
+  },
+  {
+    "en": "Do a cartwheel outside, even if it's dark.",
+    "no": "Gjør et hjulbrett utenfor, selv om det er mørkt."
+  },
+  {
+    "en": "Wear a sign that says 'Kick me' and walk around for five minutes.",
+    "no": "Ha på deg et skilt som sier 'Spark meg' og gå rundt i fem minutter."
+  },
+  {
+    "en": "Pretend to be a robot for the next five minutes.",
+    "no": "Pretendere å være en robot i de neste fem minuttene."
+  },
+  {
+    "en": "Wear a sock as a glove for the rest of the game.",
+    "no": "Bruk en sokk som en hanske resten av spillet."
+  },
+  {
+    "en": "Do your best impression of a crying baby.",
+    "no": "Gjør ditt beste inntrykk av en gråtende baby."
+  },
+  {
+    "en": "Speak in rhymes for the next three rounds.",
+    "no": "Snakk i rim i de neste tre rundene."
+  },
+  {
+    "en": "Do the Macarena dance in front of everyone.",
+    "no": "Gjør Macarena-dansen foran alle."
+  },
+  {
+    "en": "Wear a funny hat and keep it on for the next three rounds.",
+    "no": "Ha på deg en morsom hatt og la den være på i de neste tre rundene."
+  },
+  {
+    "en": "Do 10 push-ups while singing a nursery rhyme.",
+    "no": "Gjør 10 armhevinger mens du synger en barnerim."
+  },
+  {
+    "en": "Act like a mime and perform a short skit for the group.",
+    "no": "Oppfør deg som en mim og utfør en kort sketsj for gruppen."
+  },
+  {
+    "en": "Try to touch your nose with your tongue.",
+    "no": "Prøv å berøre nesen med tungen din."
+  },
+  {
+    "en": "Pretend to be a waiter/waitress and take snack orders from everyone in the room.",
+    "no": "Pretendere å være en servitør og ta bestillinger på snacks fra alle i rommet."
+  },
+  {
+    "en": "Do an impression of your favorite cartoon character.",
+    "no": "Gjør et inntrykk av din favoritt tegneseriefigur."
+  },
+  {
+    "en": "Wear a pair of socks on your hands and try to text someone.",
+    "no": "Ha på et par sokker på hendene og prøv å sende en tekstmelding til noen."
+  },
+  {
+    "en": "Do 10 jumping jacks while singing a song chosen by the group.",
+    "no": "Gjør 10 hoppende jacks mens du synger en sang valgt av gruppen."
+  },
+
+  {
+    "en": "Create a TikTok dance and perform it for the group.",
+    "no": "Lag en TikTok-dans og fremfør den for gruppen."
+  },
+  {
+    "en": "Wear a piece of clothing backward for the rest of the game.",
+    "no": "Ha på deg et plagg baklengs resten av spillet."
+  },
+  {
+    "en": "Put on a blindfold and try to guess three objects by feeling them.",
+    "no": "Ha på et bind for øynene og prøv å gjette tre objekter ved å føle dem."
+  },
+  {
+    "en": "Do your best impression of a famous historical figure.",
+    "no": "Gjør ditt beste inntrykk av en kjent historisk person."
+  },
+  {
+    "en": "Wrap yourself in toilet paper like a mummy and take a photo.",
+    "no": "Pakk deg inn i toalettpapir som en mumie og ta et bilde."
+  },
+  {
+    "en": "Speak in a British accent for the next three rounds.",
+    "no": "Snakk med en britisk aksent i de neste tre rundene."
+  },
+  {
+    "en": "Try to balance a spoon on your nose for 30 seconds.",
+    "no": "Prøv å balansere en skje på nesen i 30 sekunder."
+  },
+  {
+    "en": "Hop on one foot while reciting the alphabet backward.",
+    "no": "Hopp på ett bein mens du sier alfabetet baklengs."
+  },
+  {
+    "en": "Do an interpretive dance to a song chosen by the group.",
+    "no": "Gjør en tolkningsdans til en sang valgt av gruppen."
+  },
+  {
+    "en": "Put on a blindfold and try to guess who is touching your shoulder.",
+    "no": "Ha på et bind for øynene og prøv å gjette hvem som berører skulderen din."
+  },
+  {
+    "en": "Eat a spoonful of a condiment (such as mustard or hot sauce) without making a face.",
+    "no": "Spis en skje med et krydder (for eksempel sennep eller hot sauce) uten å lage en grimase."
+  },
+  {
+    "en": "Draw a funny face on your stomach with a marker.",
+    "no": "Tegn et morsomt ansikt på magen din med en tusj."
+  },
+  {
+    "en": "Do your best impression of a famous singer.",
+    "no": "Gjør ditt beste inntrykk av en kjent sanger."
+  },
+  {
+    "en": "Put on a blindfold and try to make a sandwich without using your hands.",
+    "no": "Ha på et bind for øynene og prøv å lage en sandwich uten å bruke hendene."
+  },
+  {
+    "en": "Speak in pig Latin for the next three rounds.",
+    "no": "Snakk på kodespråket for de neste tre rundene."
+  },
+  {
+    "en": "Do your best impression of a famous comedian.",
+    "no": "Gjør ditt beste inntrykk av en kjent komiker."
+  },
+  {
+    "en": "Put a piece of ice down your back and keep it there until it melts.",
+    "no": "Legg en isbit ned i ryggen og la den være der til den smelter."
+  },
+  {
+    "en": "Try to balance a spoon on your nose while hopping on one foot.",
+    "no": "Prøv å balansere en skje på nesen mens du hopper på ett bein."
+  },
+  {
+    "en": "Act like you're underwater for the next three rounds.",
+    "no": "Oppfør deg som om du er under vann i de neste tre rundene."
+  },
+  {
+    "en": "Wear a hat and sunglasses indoors for the next three rounds.",
+    "no": "Ha på deg en hatt og solbriller innendørs i de neste tre rundene."
+  },
+  {
+    "en": "Speak in a whisper for the rest of the game.",
+    "no": "Snakk i en hvisking resten av spillet."
+  },
+  {
+    "en": "Try to stand on one leg for as long as you can.",
+    "no": "Prøv å stå på ett bein så lenge du kan."
+  },
+  {
+    "en": "Try to do the splits (or as far as you can) and hold it for 10 seconds.",
+    "no": "Prøv å gjøre spagaten (eller så langt du kan) og hold det i 10 sekunder."
+  },
+  {
+    "en": "Make up a funny poem about a random object in the room.",
+    "no": "Lag et morsomt dikt om et tilfeldig objekt i rommet."
+  },
+  {
+    "en": "Try to touch your toes without bending your knees.",
+    "no": "Prøv å berøre tærne uten å bøye knærne."
+  }
+]
