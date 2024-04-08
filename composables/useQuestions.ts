@@ -16,14 +16,16 @@ export const useQuestions = async () => {
  * Fetches all the truth and dare questions
  */
     const fetchAllQuestions = async() => {
-    console.log("fetchallquestions is called")
 
     // * Currently only 25 questions
     const truthResponse = await $fetch<Question[] | null>("/truthQuestions.json")
+    
 
     if (truthResponse) {
         truthQuestions.value = truthResponse
     }
+
+    console.info(`There are ${truthQuestions.value.length} truth questions`)
 
 
     // * Currently only 25 questions
@@ -32,6 +34,8 @@ export const useQuestions = async () => {
     if (dareResponse) {
         dareQuestions.value = dareResponse
     }
+    console.info(`There are ${dareQuestions.value.length} dare questions`)
+
 }
 
     /**
