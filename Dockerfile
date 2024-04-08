@@ -8,7 +8,7 @@
 
 ARG NODE_VERSION=20.11.0
 
-FROM node:${NODE_VERSION}-alpine
+FROM node:${NODE_VERSION}-alpine AS builder
 
 # Use production node environment by default.
 # ENV NODE_ENV production
@@ -31,8 +31,21 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 # Copy the rest of the source files into the image.
 COPY . .
 
+RUN npm install && npm install -g serve
+
+RUN npm run generate
+
+# Stage 2
+FROM node:${NODE_VERSION}-alpine
+
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app/.output/ ./
+
+RUN npm install -g serve
+
 # Expose the port that the application listens on.
 EXPOSE 3000
 
 # Run the application.
-CMD npm run dev
+CMD ["serve", ".output/public"]
