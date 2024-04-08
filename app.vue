@@ -8,7 +8,12 @@
     </div>
 
     <div class="max-w-96 mx-auto mt-10 flex flex-col w-full justify-between ">
-        <Language :language="languageText" class="flex mb-2" @switch-language="switchLanguage" />
+        <div class="flex justify-between">
+
+          <!-- TODO - Make it so I can ask the questions in norwegian too -->
+          <!-- <Language :language="languageText" class="flex mb-2" @switch-language="switchLanguage" /> -->
+          <!-- <span>{{ mode }}</span> -->
+        </div>
 
 
         <TheQuestion :text="questionText"
@@ -71,6 +76,7 @@ const dareButtonClick = async () => {
   mode.value = "truth"
 }
 
+// TODO - Make it so I can ask the questions in norwegian too
 const languageText = computed(() =>
   language.value === "en" ? "english" : "norsk"
 );
