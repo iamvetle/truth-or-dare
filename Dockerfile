@@ -8,9 +8,9 @@
 
 ARG NODE_VERSION=20.11.0
 
-FROM node:${NODE_VERSION}-alpine AS builder
+FROM node:20.11-alpine AS builder
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # ? no idea what is meant by this
 # Download dependencies as a separate step to take advantage of Docker's caching.
@@ -23,22 +23,22 @@ WORKDIR /usr/src/app
 #     npm ci --omit=dev
 
 COPY package*.json ./
-RUN npm install 
+RUN npm install && npm install serve
 
 # Copy the rest of the source files into the image.
 COPY . ./
 
-RUN npm run generate && npm install -g serve
+RUN npm run generate
 
 # Stage 2
-FROM node:${NODE_VERSION}-alpine
+FROM node:20.11-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY --from=builder /usr/src/app/.output/ ./
+COPY --from=builder /app/.output/ ./
 
 # Expose the port that the application listens on.
 EXPOSE 3000
 
 # Run the application.
-CMD ["npx", "serve", ".output/public"]
+CMD ["npx", "serve", "public"]
