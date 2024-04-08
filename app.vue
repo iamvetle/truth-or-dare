@@ -20,6 +20,7 @@
           class="bg-white rounded-lg flex items-center justify-start min-h-64 w-full px-4" 
 
           v-motion="slideAnimation"
+          :delay="200"
           
           :key="questionText"
           />
