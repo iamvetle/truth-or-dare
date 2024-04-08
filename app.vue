@@ -7,23 +7,22 @@
       <div></div>
     </div>
 
-    <div class="max-w-96 mx-auto mt-10 flex flex-col flex-1 justify-between">
-      <div>
+    <div class="max-w-96 mx-auto mt-10 flex flex-col w-full justify-between ">
         <Language :language="languageText" class="flex mb-2" @switch-language="switchLanguage" />
 
 
         <TheQuestion :text="questionText"
-          class="mx-auto bg-white rounded-lg flex items-center justify-start h-64 w-full px-4" />
+          class="mx-auto bg-white rounded-lg flex items-center justify-start min-h-64 w-full px-4" />
 
         <!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
 
         <div class="text-[#02343F] flex justify-between space-x-2 mt-7 text-sm">
           <BackButton @back="backToQuestion" />
           <ForwardButton @forward="forwardToQuestion" />
-        </div>
+
       </div>
 
-      <div class="mb-56 buttons mt-14 flex justify-between">
+      <div class="mb-56 mt-14 flex justify-between">
         <TruthButton :label="language === 'en' ? 'Truth' : 'Sannhet'"
           class="font-medium text-[#50586C] bg-[#DCE2F0] w-40 h-16 rounded-md shadow-sm"
           @buttonClick="truthButtonClick" />
