@@ -7,7 +7,7 @@
       <div></div>
     </div>
 
-    <div class="max-w-96 mx-auto mt-10 flex flex-col w-full justify-between ">
+    <div class="max-w-96 mx-auto mt-10 flex flex-col w-full justify-center ">
         <div class="flex justify-between">
 
           <!-- TODO - Make it so I can ask the questions in norwegian too -->
@@ -17,7 +17,12 @@
 
 
         <TheQuestion :text="questionText"
-          class="mx-auto bg-white rounded-lg flex items-center justify-start min-h-64 w-full px-4" />
+          class="bg-white rounded-lg flex items-center justify-start min-h-64 w-full px-4" 
+
+          v-motion="slideAnimation"
+          
+          :key="questionText"
+          />
 
         <!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
 
@@ -41,6 +46,9 @@
 </template>
 
 <script setup lang="ts">
+import { slideVisibleLeft, slideVisibleRight } from "@vueuse/motion"
+
+
 type Question = {
   en: string;
   no: string;
@@ -51,6 +59,9 @@ const backQuestions = ref<Question[] | []>([])
 const forwardQuestions = ref<Question[] | []>([])
 const mode = ref<"truth" | "dare">("truth")
 
+const slideDirection = ref<"right" | "left">("right")
+
+const slideAnimation = computed(() => slideDirection.value === "right" ? slideVisibleRight : slideVisibleLeft )
 
 const { randomTruthQuestion, randomDareQuestion,fetchAllQuestions } = await useQuestions()
 
@@ -61,7 +72,10 @@ onMounted(async() => {
 const truthButtonClick = async () => {
   const question = await randomTruthQuestion()
 
-  if (theQuestion.value != null) { //@ts-ignore
+  if (theQuestion.value != null) { 
+    slideDirection.value = "left"
+
+    //@ts-ignore
     backQuestions.value.push(theQuestion.value)
   }
   theQuestion.value = question
@@ -72,7 +86,10 @@ const truthButtonClick = async () => {
 const dareButtonClick = async () => {
   const question = await randomDareQuestion()
 
-  if (theQuestion.value != null) { //@ts-ignore
+  if (theQuestion.value != null) { 
+    slideDirection.value = "right"
+
+    //@ts-ignore
     backQuestions.value.push(theQuestion.value)
   }
   theQuestion.value = question
