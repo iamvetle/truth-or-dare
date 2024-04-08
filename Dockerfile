@@ -43,4 +43,4 @@ RUN npm install -g serve
 EXPOSE 3000
 
 # Run the application.
-CMD ["serve", ".output/public"]
+CMD ["npx", "serve", ".output/public"]
