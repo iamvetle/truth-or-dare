@@ -28,7 +28,7 @@ RUN npm install
 # Copy the rest of the source files into the image.
 COPY . ./
 
-RUN npm run generate
+RUN npm run generate && npm install -g serve
 
 # Stage 2
 FROM node:${NODE_VERSION}-alpine
@@ -36,8 +36,6 @@ FROM node:${NODE_VERSION}-alpine
 WORKDIR /usr/src/app
 
 COPY --from=builder /usr/src/app/.output/ ./
-
-RUN npm install -g serve
 
 # Expose the port that the application listens on.
 EXPOSE 3000
