@@ -4,8 +4,8 @@
     "no": "Hva er din største frykt, og hvorfor?"
   },
   {
-    "en": "Have you ever cheated on a test or exam? If so, how did you do it?",
-    "no": "Har du noen gang jukset på en prøve eller eksamen? Hvis ja, hvordan gjorde du det?"
+    "en": "Have you ever cheated on a test or exam? How did you do it?",
+    "no": "Har du noen gang jukset på en prøve eller eksamen? Hvordan gjorde du det?"
   },
   {
     "en": "What is the most embarrassing thing that has ever happened to you in public?",
@@ -111,14 +111,13 @@
     "en": "Have you ever pretended to like a gift you didn't actually like? What was it?",
     "no": "Har du noen gang latet som om du likte en gave du egentlig ikke likte? Hva var det?"
   },
-
   {
-    "en": "Have you ever cheated on a test or exam? How did you do it?",
+    "en": "Have you ever cheated on a test or exam? If so, how did you do it?",
     "no": "Har du noen gang jukset på en prøve eller eksamen? Hvordan gjorde du det?"
   },
   {
-    "en": "What is the most embarrassing thing your parents have caught you doing?",
-    "no": "Hva er den mest pinlige tingen foreldrene dine har tatt deg på fersken med?"
+    "en": "What is the most embarrassing thing your parents have caught you doing at home?",
+    "no": "Hva er den mest pinlige tingen foreldrene dine har tatt deg på fersken med hjemme?"
   },
   {
     "en": "Have you ever had a crush on a teacher or professor? Who was it?",
@@ -141,23 +140,19 @@
     "no": "Har du noen gang snoke gjennom noens telefon uten tillatelse? Hva fant du?"
   },
   {
-    "en": "What is the biggest lie you've ever told your best friend?",
-    "no": "Hva er den største løgnen du noen gang har fortalt din beste venn?"
+    "en": "Have you ever had a crush on a friend's parent? Who?",
+    "no": "Har du noen gang hatt et crush på en venns forelder? Hvem?"
   },
   {
-    "en": "Have you ever been caught picking your nose?",
-    "no": "Har du noen gang blitt tatt i å plukke i nesen?"
+    "en": "What is the weirdest dream you've ever had?",
+    "no": "Hva er den rareste drømmen du noen gang har hatt?"
   },
   {
-    "en": "What is the most embarrassing thing you've done at a party?",
-    "no": "Hva er den mest pinlige tingen du har gjort på en fest?"
+    "en": "Have you ever had a paranormal experience? What happened?",
+    "no": "Har du noen gang hatt en paranormal opplevelse? Hva skjedde?"
   },
   {
-    "en": "Have you ever shoplifted? What did you take?",
-    "no": "Har du noen gang stjålet fra en butikk? Hva tok du?"
-  },
-  {
-    "en": "What is the worst thing you've ever said about someone behind their back?",
+    "en": "What is the most embarrassing thing you've ever said about someone behind their back?",
     "no": "Hva er det verste du noen gang har sagt om noen bak deres rygg?"
   },
   {
@@ -175,72 +170,6 @@
   {
     "en": "What is the most embarrassing thing you've worn in public?",
     "no": "Hva er den mest pinlige tingen du har hatt på deg offentlig?"
-  },
-  {
-    "en": "Have you ever had a crush on a friend's parent? Who?",
-    "no": "Har du noen gang hatt et crush på en venns forelder? Hvem?"
-  },
-  {
-    "en": "What is the weirdest dream you've ever had?",
-    "no": "Hva er den rareste drømmen du noen gang har hatt?"
-  },
-  {
-    "en": "Have you ever had a paranormal experience? What happened?",
-    "no": "Har du noen gang hatt en paranormal opplevelse? Hva skjedde?"
-  },
-  {
-    "en": "What is the most embarrassing thing you've ever said in front of a crush?",
-    "no": "Hva er den mest pinlige tingen du noen gang har sagt foran en crush?"
-  },
-  {
-    "en": "Have you ever been caught lying by your parents? What was it about?",
-    "no": "Har du noen gang blitt tatt i å lyve av foreldrene dine? Hva handlet det om?"
-  },
-
-  {
-    "en": "What is the most embarrassing thing you've ever done while on a video call?",
-    "no": "Hva er den mest pinlige tingen du har gjort mens du var på videosamtale?"
-  },
-  {
-    "en": "Have you ever had a crush on a fictional character? Who?",
-    "no": "Har du noen gang hatt et crush på en fiktiv karakter? Hvem?"
-  },
-  {
-    "en": "What is the most embarrassing thing you've done in front of your siblings?",
-    "no": "Hva er den mest pinlige tingen du har gjort foran søsknene dine?"
-  },
-  {
-    "en": "Have you ever regretted something you posted on social media? What was it?",
-    "no": "Har du noen gang angret på noe du postet på sosiale medier? Hva var det?"
-  },
-
-  {
-    "en": "What is the most embarrassing thing your parents have caught you doing at home?",
-    "no": "Hva er den mest pinlige tingen foreldrene dine har tatt deg på fersken med hjemme?"
-  },
-  {
-    "en": "Have you ever had a crush on someone you met online? Who?",
-    "no": "Har du noen gang hatt et crush på noen du møtte på nettet? Hvem?"
-  },
-  {
-    "en": "What is the biggest lie you've told your significant other?",
-    "no": "Hva er den største løgnen du har fortalt partneren din?"
-  },
-  {
-    "en": "Have you ever regretted breaking up with someone? Why?",
-    "no": "Har du noen gang angret på at du gjorde det slutt med noen? Hvorfor?"
-  },
-  {
-    "en": "What is the most embarrassing thing you've done in front of your grandparents?",
-    "no": "Hva er den mest pinlige tingen du har gjort foran besteforeldrene dine?"
-  },
-  {
-    "en": "Have you ever lied about your age to get into a movie or club? Why?",
-    "no": "Har du noen gang løyet om alderen din for å komme inn på kino eller klubb? Hvorfor?"
-  },
-  {
-    "en": "What is the most embarrassing nickname you've ever been given?",
-    "no": "Hva er det mest pinlige kallenavnet du har fått?"
   },
   {
     "en": "Have you ever had a crush on a friend's sibling? Who?",
@@ -279,8 +208,55 @@
     "no": "Har du noen gang blitt tatt for å jukse i et spill? Hvilket spill var det?"
   },
   {
-    "en": "What is the biggest lie you've ever told your best friend?",
-    "no": "Hva er den største løgnen du noen gang har fortalt din beste venn?"
+    "en": "Have you ever had a crush on a fictional character? Who?",
+    "no": "Har du noen gang hatt et crush på en fiktiv karakter? Hvem?"
+  },
+  {
+    "en": "Have you ever lied about your age to get into a movie or club? Why?",
+    "no": "Har du noen gang løyet om alderen din for å komme inn på kino eller klubb? Hvorfor?"
+  },
+  {
+    "en": "What is the most embarrassing nickname you've ever been given?",
+    "no": "Hva er det mest pinlige kallenavnet du har fått?"},
+  {
+    "en": "Have you ever had a crush on a friend's sibling? Who?",
+    "no": "Har du noen gang hatt et crush på en venns søsken? Hvem?"
+  },
+  {
+    "en": "What is the most embarrassing thing you've ever said to your crush?",
+    "no": "Hva er den mest pinlige tingen du har sagt til din crush?"
+  },
+  {
+    "en": "Have you ever been caught lying by your best friend? What was it about?",
+    "no": "Har du noen gang blitt tatt i å lyve av din beste venn? Hva handlet det om?"
+  },
+  {
+    "en": "What is the most embarrassing thing you've done while on a video call?",
+    "no": "Hva er den mest pinlige tingen du har gjort mens du var på videosamtale?"
+  },
+  {
+    "en": "Have you ever had a crush on someone you met online? Who?",
+    "no": "Har du noen gang hatt et crush på noen du møtte på nettet? Hvem?"
+  },
+  {
+    "en": "What is the biggest lie you've told your significant other?",
+    "no": "Hva er den største løgnen du har fortalt partneren din?"
+  },
+  {
+    "en": "Have you ever regretted breaking up with someone? Why?",
+    "no": "Har du noen gang angret på at du gjorde det slutt med noen? Hvorfor?"
+  },
+  {
+    "en": "What is the most embarrassing thing you've done in front of your grandparents?",
+    "no": "Hva er den mest pinlige tingen du har gjort foran besteforeldrene dine?"
+  },
+  {
+    "en": "Have you ever lied about your age to get into a movie or club? Why?",
+    "no": "Har du noen gang løyet om alderen din for å komme inn på kino eller klubb? Hvorfor?"
+  },
+  {
+    "en": "What is the most embarrassing wardrobe malfunction story?",
+    "no": "Hva er din mest pinlige garderobe funksjonssvikt historie?"
   },
   {
     "en": "Have you ever lied to get out of trouble with the law? What happened?",
@@ -314,7 +290,6 @@
     "en": "What is the most embarrassing thing you've said in front of a large group of people?",
     "no": "Hva er den mest pinlige tingen du har sagt foran en stor gruppe mennesker?"
   },
-
   {
     "en": "What is the most embarrassing thing you've done in front of your crush's parents?",
     "no": "Hva er den mest pinlige tingen du har gjort foran crushens foreldre?"
@@ -340,7 +315,7 @@
     "no": "Har du noen gang stjålet noe fra en butikk? Hva var det?"
   },
   {
-    "en": "What is the biggest lie you've ever told your parents about your whereabouts?",
+    "en": "What is the biggest lie you've told your parents about your whereabouts?",
     "no": "Hva er den største løgnen du har fortalt foreldrene dine om hvor du var?"
   },
   {
@@ -356,63 +331,11 @@
     "no": "Har du noen gang hatt et crush på en fiktiv karakter fra en TV-serie eller film? Hvem?"
   },
   {
-    "en": "What is the biggest lie you've told your significant other about your past?",
-    "no": "Hva er den største løgnen du har fortalt partneren din om fortiden din?"
-  },
-  {
-    "en": "Have you ever gotten into a physical fight with someone? What happened?",
-    "no": "Har du noen gang havnet i en fysisk konfrontasjon med noen? Hva skjedde?"
-  },
-  {
-    "en": "What is the most embarrassing thing you've done while trying to act cool?",
-    "no": "Hva er den mest pinlige tingen du har gjort mens du prøvde å være kul?"
-  },
-  {
-    "en": "Have you ever had a crush on a celebrity? Who?",
-    "no": "Har du noen gang hatt et crush på en kjendis? Hvem?"
-  },
-  {
-    "en": "What is the most embarrassing thing you've done on a first date?",
-    "no": "Hva er den mest pinlige tingen du har gjort på en første date?"
-  },
-  {
-    "en": "Have you ever been caught watching something inappropriate by a family member? What was it?",
-    "no": "Har du noen gang blitt tatt på fersken med å se på noe upassende av et familiemedlem? Hva var det?"
-  },
-  {
-    "en": "What is the most embarrassing thing you've done while trying to impress your crush?",
-    "no": "Hva er den mest pinlige tingen du har gjort mens du prøvde å imponere crushen din?"
-  },
-  {
-    "en": "Have you ever pretended to be someone else online? Why?",
-    "no": "Har du noen gang latet som om du var noen andre på nettet? Hvorfor?"
-  },
-  {
-    "en": "What is the most embarrassing thing you've done while drunk?",
-    "no": "Hva er den mest pinlige tingen du har gjort mens du var full?"
-  },
-  {
-    "en": "Have you ever had a crush on a friend's sibling? Who?",
-    "no": "Har du noen gang hatt et crush på en venns søsken? Hvem?"
-  },
-  {
-    "en": "What is the most embarrassing thing you've done while trying to look good for a date?",
-    "no": "Hva er den mest pinlige tingen du har gjort mens du prøvde å se bra ut for en date?"
-  },
-  {
-    "en": "Have you ever regretted something you posted on social media? What was it?",
-    "no": "Har du noen gang angret på noe du postet på sosiale medier? Hva var det?"
-  },
-  {
-    "en": "What is the most embarrassing thing you've said to someone you liked?",
-    "no": "Hva er den mest pinlige tingen du har sagt til noen du likte?"
-  },
-  {
     "en": "Have you ever lied about your age to someone you were interested in? Why?",
     "no": "Har du noen gang løyet om alderen din for noen du var interessert i? Hvorfor?"
   },
   {
-    "en": "What is the most embarrassing thing you've done in front of a crowd?",
-    "no": "Hva er den mest pinlige tingen du har gjort foran en folkemengde?"
+    "en": "What is the most embarrassing thing you've done while drunk?",
+    "no": "Hva er den mest pinlige tingen du har gjort mens du var full?"
   }
 ]

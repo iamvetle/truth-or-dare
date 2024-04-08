@@ -41,7 +41,7 @@
   },
   {
     "en": "Do a handstand against the wall for as long as you can.",
-    "no": "Gjør et håndstående mot veggen så lenge du klarer."
+    "no": "Gjør et håndstående mot veggen så lenge du kan."
   },
   {
     "en": "Put on lipstick (or chapstick) without using your hands.",
@@ -77,7 +77,7 @@
   },
   {
     "en": "Pretend to be a waiter/waitress and take snack orders from everyone in the room.",
-    "no": "Pretend to be a waiter/waitress and take snack orders from everyone in the room."
+    "no": "Pretendere å være en servitør og ta bestillinger på snacks fra alle i rommet."
   },
   {
     "en": "Try to lick your nose.",
@@ -90,7 +90,7 @@
   {
     "en": "Do an impression of a famous movie character.",
     "no": "Gjør et inntrykk av en kjent filmkarakter."
-  },
+ },
   {
     "en": "Try to juggle three items from around the room.",
     "no": "Prøv å jonglere tre ting fra rommet."
@@ -99,7 +99,6 @@
     "en": "Make up a short poem about the person to your left.",
     "no": "Lag et kort dikt om personen til venstre for deg."
   },
-
   {
     "en": "Do the chicken dance for one minute.",
     "no": "Gjør hønsehoppdansen i ett minutt."
@@ -111,10 +110,6 @@
   {
     "en": "Attempt to breakdance (even if you don't know how).",
     "no": "Prøv å breakdance (selv om du ikke kan det)."
-  },
-  {
-    "en": "Try to lick your own elbow.",
-    "no": "Prøv å slikke albuen din."
   },
   {
     "en": "Do 10 jumping jacks while saying the alphabet backwards.",
@@ -162,7 +157,7 @@
   },
   {
     "en": "Do the robot dance for one minute.",
-    "no": "Gjør robotdansen i ett minutt."
+"no": "Gjør robotdansen i ett minutt."
   },
   {
     "en": "Pretend to be a news reporter and give a live report about something ridiculous.",
@@ -175,10 +170,6 @@
   {
     "en": "Do 20 jumping jacks while singing the alphabet.",
     "no": "Gjør 20 hoppende jacks mens du synger alfabetet."
-  },
-  {
-    "en": "Try to lick your own nose.",
-    "no": "Prøv å slikke din egen nese."
   },
   {
     "en": "Put an ice cube down your shirt and leave it there until it melts.",
@@ -200,7 +191,6 @@
     "en": "Do your best impression of a famous politician.",
     "no": "Gjør ditt beste inntrykk av en kjent politiker."
   },
-
   {
     "en": "Do a silly dance in public for one minute.",
     "no": "Gjør en tåpelig dans offentlig i ett minutt."
@@ -255,7 +245,7 @@
   },
   {
     "en": "Wear a sock as a glove for the rest of the game.",
-    "no": "Bruk en sokk som en hanske resten av spillet."
+    "no": "Bruk en sokk som en handske resten av spillet."
   },
   {
     "en": "Do your best impression of a crying baby.",
@@ -294,15 +284,6 @@
     "no": "Gjør et inntrykk av din favoritt tegneseriefigur."
   },
   {
-    "en": "Wear a pair of socks on your hands and try to text someone.",
-    "no": "Ha på et par sokker på hendene og prøv å sende en tekstmelding til noen."
-  },
-  {
-    "en": "Do 10 jumping jacks while singing a song chosen by the group.",
-    "no": "Gjør 10 hoppende jacks mens du synger en sang valgt av gruppen."
-  },
-
-  {
     "en": "Create a TikTok dance and perform it for the group.",
     "no": "Lag en TikTok-dans og fremfør den for gruppen."
   },
@@ -335,7 +316,7 @@
     "no": "Hopp på ett bein mens du sier alfabetet baklengs."
   },
   {
-    "en": "Do an interpretive dance to a song chosen by the group.",
+"en": "Do an interpretive dance to a song chosen by the group.",
     "no": "Gjør en tolkningsdans til en sang valgt av gruppen."
   },
   {
