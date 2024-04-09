@@ -1,5 +1,16 @@
 <template>
-  <div class="bg-[#F0EDCC] w-full min-h-screen pt-12 px-2 flex flex-col mx-auto">
+  <Head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </Head>
+
+  <div
+    class="bg-[#F0EDCC] w-full min-h-screen pt-12 px-2 flex flex-col mx-auto"
+  >
+  <SpeedInsights/>
+  
     <div class="space-y-2 w-fit mx-auto">
       <h1 class="text-3xl text-[#02343F] text-center font-bold">
         Truth or dare?
@@ -7,39 +18,39 @@
       <div></div>
     </div>
 
-    <div class="max-w-96 mx-auto mt-10 flex flex-col w-full justify-center ">
-        <div class="flex justify-between">
+    <div class="max-w-96 mx-auto mt-10 flex flex-col w-full justify-center">
+      <div class="flex justify-between">
+        <!-- TODO - Make it so I can ask the questions in norwegian too -->
+        <!-- <Language :language="languageText" class="flex mb-2" @switch-language="switchLanguage" /> -->
+        <!-- <span>{{ mode }}</span> -->
+      </div>
 
-          <!-- TODO - Make it so I can ask the questions in norwegian too -->
-          <!-- <Language :language="languageText" class="flex mb-2" @switch-language="switchLanguage" /> -->
-          <!-- <span>{{ mode }}</span> -->
-        </div>
+      <TheQuestion
+        :text="questionText"
+        class="bg-white rounded-lg flex items-center justify-start min-h-64 w-full px-4"
+        v-motion="slideAnimation"
+        :delay="200"
+        :key="questionText"
+      />
 
+      <!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
 
-        <TheQuestion :text="questionText"
-          class="bg-white rounded-lg flex items-center justify-start min-h-64 w-full px-4" 
-
-          v-motion="slideAnimation"
-          :delay="200"
-          
-          :key="questionText"
-          />
-
-        <!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
-
-        <div class="text-[#02343F] flex justify-between space-x-2 mt-7 text-sm">
-          <BackButton @back="backToQuestion" />
-          <ForwardButton @forward="forwardToQuestion" />
-
+      <div class="text-[#02343F] flex justify-between space-x-2 mt-7 text-sm">
+        <BackButton @back="backToQuestion" />
+        <ForwardButton @forward="forwardToQuestion" />
       </div>
 
       <div class="mb-56 mt-14 flex justify-between space-x-2">
-        <TruthButton :label="language === 'en' ? 'Truth' : 'Sannhet'"
+        <TruthButton
+          :label="language === 'en' ? 'Truth' : 'Sannhet'"
           class="font-medium text-[#50586C] bg-[#DCE2F0] max-w-40 w-full h-16 rounded-md shadow-sm"
-          @buttonClick="truthButtonClick" />
-        <DareButton :label="language === 'en' ? 'Dare' : 'Nødt'"
+          @buttonClick="truthButtonClick"
+        />
+        <DareButton
+          :label="language === 'en' ? 'Dare' : 'Nødt'"
           class="font-medium text-[#9000FF] bg-[#FFE8F5] max-w-40 w-full h-16 rounded-md shadow-sm"
-          @button-click="dareButtonClick" />
+          @button-click="dareButtonClick"
+        />
       </div>
     </div>
     <!-- <pre>{{ theQuestion }}</pre> -->
@@ -47,55 +58,58 @@
 </template>
 
 <script setup lang="ts">
-import { slideVisibleLeft, slideVisibleRight } from "@vueuse/motion"
-
+import { slideVisibleLeft, slideVisibleRight } from "@vueuse/motion";
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
 type Question = {
   en: string;
   no: string;
 };
 
-const theQuestion = ref<Question | null>(null)
-const backQuestions = ref<Question[] | []>([])
-const forwardQuestions = ref<Question[] | []>([])
-const mode = ref<"truth" | "dare">("truth")
+const theQuestion = ref<Question | null>(null);
+const backQuestions = ref<Question[] | []>([]);
+const forwardQuestions = ref<Question[] | []>([]);
+const mode = ref<"truth" | "dare">("truth");
 
-const slideDirection = ref<"right" | "left">("right")
+const slideDirection = ref<"right" | "left">("right");
 
-const slideAnimation = computed(() => slideDirection.value === "right" ? slideVisibleRight : slideVisibleLeft )
+const slideAnimation = computed(() =>
+  slideDirection.value === "right" ? slideVisibleRight : slideVisibleLeft
+);
 
-const { randomTruthQuestion, randomDareQuestion,fetchAllQuestions } = await useQuestions()
+const { randomTruthQuestion, randomDareQuestion, fetchAllQuestions } =
+  await useQuestions();
 
-onMounted(async() => {
-  await fetchAllQuestions()
-})
+onMounted(async () => {
+  await fetchAllQuestions();
+});
 
 const truthButtonClick = async () => {
-  const question = await randomTruthQuestion()
+  const question = await randomTruthQuestion();
 
-  if (theQuestion.value != null) { 
-    slideDirection.value = "left"
+  if (theQuestion.value != null) {
+    slideDirection.value = "left";
 
     //@ts-ignore
-    backQuestions.value.push(theQuestion.value)
+    backQuestions.value.push(theQuestion.value);
   }
-  theQuestion.value = question
+  theQuestion.value = question;
 
-  mode.value = "truth"
-}
+  mode.value = "truth";
+};
 
 const dareButtonClick = async () => {
-  const question = await randomDareQuestion()
+  const question = await randomDareQuestion();
 
-  if (theQuestion.value != null) { 
-    slideDirection.value = "right"
+  if (theQuestion.value != null) {
+    slideDirection.value = "right";
 
     //@ts-ignore
-    backQuestions.value.push(theQuestion.value)
+    backQuestions.value.push(theQuestion.value);
   }
-  theQuestion.value = question
-  mode.value = "truth"
-}
+  theQuestion.value = question;
+  mode.value = "truth";
+};
 
 // TODO - Make it so I can ask the questions in norwegian too
 const languageText = computed(() =>
