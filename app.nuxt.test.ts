@@ -47,7 +47,7 @@ vi.mock("../utils/fetchDareQuestions", async () => ({
   }),
 }));
 
-
+// ? I dont need this - so confused
 // const mockedRandom = vi.fn().mockReturnValue({
 //   en:"what is p",
 //   no:"hva er p"
@@ -125,5 +125,6 @@ describe("testing the main app", async () => {
     // ! FINALLY FUCKING WORKS, or?
     const questionP = await page.textContent("#questionP");
     expect(questionP).not.toContain("...");
+    console.log(questionP)
   });
 });

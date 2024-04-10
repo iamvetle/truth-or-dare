@@ -73,7 +73,7 @@ const numOfDareQuestions = computed(() => allDareQuestions.value.length);
 const allTruthQuestions = ref<Question[] | []>([]);
 const numOfTruthQuestions = computed(() => allTruthQuestions.value.length);
 
-const theQuestion = ref<Question | string | null>("");
+const theQuestion = ref<Question | string | null>(null);
 const backQuestions = ref<Question[] | []>([]);
 const forwardQuestions = ref<Question[] | []>([]);
 const mode = ref<"truth" | "dare">("truth");
