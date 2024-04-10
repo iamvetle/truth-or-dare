@@ -1,6 +1,7 @@
 <template>
     <button 
     id="dare-choice-button"
+    data-testid="dare-choice-button-test"
     @click="$emit('buttonClick')" class="">{{ label }}</button>
 </template>
 

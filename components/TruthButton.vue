@@ -1,5 +1,6 @@
 <template>
         <button 
+        data-testid="truth-choice-button-test"
         id="truth-choice-button"
         @click="$emit('buttonClick')"
         class=""

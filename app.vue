@@ -73,7 +73,7 @@ const numOfDareQuestions = computed(() => allDareQuestions.value.length);
 const allTruthQuestions = ref<Question[] | []>([]);
 const numOfTruthQuestions = computed(() => allTruthQuestions.value.length);
 
-const theQuestion = ref<Question | string | null>(null);
+const theQuestion = ref<Question | null>(null);
 const backQuestions = ref<Question[] | []>([]);
 const forwardQuestions = ref<Question[] | []>([]);
 const mode = ref<"truth" | "dare">("truth");
@@ -102,7 +102,7 @@ onMounted(async () => {
 
 });
 
-const truthButtonClick = async () => {
+const truthButtonClick = () => {
   const question = randomTruthQuestion();
 
   console.log(question)
@@ -118,7 +118,7 @@ const truthButtonClick = async () => {
   mode.value = "truth";
 };
 
-const dareButtonClick = async () => {
+const dareButtonClick = () => {
   const question = randomDareQuestion();
 
   if (theQuestion.value != null) {

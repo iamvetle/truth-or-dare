@@ -1,7 +1,8 @@
 import { describe, expect, test, vi } from "vitest";
 import app from "~/app.vue";
-import { mountSuspended } from "@nuxt/test-utils/runtime";
+import { mountSuspended, renderSuspended } from "@nuxt/test-utils/runtime";
 import { createPage, setup, url } from "@nuxt/test-utils/e2e";
+import { screen, fireEvent } from "@testing-library/vue";
 
 const mockRandomTruthQuestions = [
   {
@@ -115,7 +116,7 @@ describe("testing the main app", async () => {
     expect(button.element.tagName).toBe("BUTTON");
   });
 
-  test("Testing as page", async () => {
+  test("Testing as page (e2e)", async () => {
     const page = await createPage();
     await page.goto(url("/"), {waitUntil:"hydration"})
     const backButton = await page.textContent("#back-button")
@@ -127,4 +128,53 @@ describe("testing the main app", async () => {
     expect(questionP).not.toContain("...");
     console.log(questionP)
   });
+
+  test("Testing with html renderSuspended", async () => {
+    let html = await renderSuspended(app)
+
+    expect((html).getAllByTestId("dare-choice-button-test")).toMatchInlineSnapshot(`
+      [
+        <button
+          class="font-medium text-[#9000FF] bg-[#FFE8F5] max-w-40 w-full h-16 rounded-md shadow-sm"
+          data-testid="dare-choice-button-test"
+          id="dare-choice-button"
+        >
+          Dare
+        </button>,
+      ]
+    `)
+  })
+
+  test("The dare button should create/get a new question/dare when clicked (with renderSuspended)", async () => {
+    await renderSuspended(app)
+
+    let questionP = screen.getByTestId("questionP-test")
+    let questionPHTML = questionP.innerHTML
+    console.log("before fireEvent", questionPHTML)
+
+    const button = screen.getByTestId("dare-choice-button-test")
+    await fireEvent.click(button)
+
+    questionP = screen.getByTestId("questionP-test")
+    console.log("after fireEvent", questionPHTML)
+    expect(questionP).not.toContainEqual(questionPHTML)
+  })
+
+  test("The truth button should create/get a new question/truth when clicked (with renderSuspended)", async () => {
+    await renderSuspended(app)
+
+    let questionP = screen.getByTestId("questionP-test")
+    let questionPHTML = questionP.innerHTML
+    console.log("before fireEvent", questionPHTML)
+
+    const button = screen.getByTestId("truth-choice-button-test")
+    await fireEvent.click(button)
+
+    questionP = screen.getByTestId("questionP-test")
+    console.log("after fireEvent", questionPHTML)
+    expect(questionP).not.toContainEqual(questionPHTML)
+    
+  })
+
+  
 });
