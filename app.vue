@@ -32,8 +32,6 @@
         :delay="200"
         :key="questionText"
       />
-      {{ questionText }}
-
       <!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
 
       <div class="text-[#02343F] flex justify-between space-x-2 mt-7 text-sm">
@@ -60,6 +58,8 @@
 
 <script setup lang="ts">
 import { slideVisibleLeft, slideVisibleRight } from "@vueuse/motion";
+import { fetchDareQuestions } from "./utils/fetchDareQuestions";
+import { fetchTruthQuestions } from "./utils/fetchTruthQuestions";
 // import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 
 type Question = {
@@ -67,7 +67,13 @@ type Question = {
   no: string;
 };
 
-const theQuestion = ref<Question | null>(null);
+const allDareQuestions = ref<Question[] | []>([]);
+const numOfDareQuestions = computed(() => allDareQuestions.value.length);
+
+const allTruthQuestions = ref<Question[] | []>([]);
+const numOfTruthQuestions = computed(() => allTruthQuestions.value.length);
+
+const theQuestion = ref<Question | string | null>("");
 const backQuestions = ref<Question[] | []>([]);
 const forwardQuestions = ref<Question[] | []>([]);
 const mode = ref<"truth" | "dare">("truth");
@@ -78,15 +84,28 @@ const slideAnimation = computed(() =>
   slideDirection.value === "right" ? slideVisibleRight : slideVisibleLeft
 );
 
-const { randomTruthQuestion, randomDareQuestion, fetchAllQuestions } =
-  await useQuestions();
+onMounted(async () => {
+  allDareQuestions.value = await fetchDareQuestions();
+  allTruthQuestions.value = await fetchTruthQuestions();
 
-await fetchAllQuestions();
+  console.log("app 91", allTruthQuestions.value)
 
-theQuestion.value = await randomTruthQuestion();
+  if (allTruthQuestions.value.length > 1) {
+    console.log("api 94", allTruthQuestions.value)
+    console.log("api 98", theQuestion.value);
+
+
+    theQuestion.value = randomTruthQuestion();
+    console.log("api 97", theQuestion.value);
+    
+  }
+
+});
 
 const truthButtonClick = async () => {
-  const question = await randomTruthQuestion();
+  const question = randomTruthQuestion();
+
+  console.log(question)
 
   if (theQuestion.value != null) {
     slideDirection.value = "left";
@@ -100,7 +119,7 @@ const truthButtonClick = async () => {
 };
 
 const dareButtonClick = async () => {
-  const question = await randomDareQuestion();
+  const question = randomDareQuestion();
 
   if (theQuestion.value != null) {
     slideDirection.value = "right";
@@ -147,7 +166,7 @@ const backToQuestion = () => {
   }
 };
 
-const forwardToQuestion = () => {
+function forwardToQuestion () {
   if (forwardQuestions.value.length > 0) {
     const forwardQuestion = forwardQuestions.value.pop() as Question;
     // updates the earlier questions
@@ -157,5 +176,29 @@ const forwardToQuestion = () => {
     // updates the current question
     theQuestion.value = forwardQuestion;
   }
+};
+
+function randomTruthQuestion () {
+  // const response = await $fetch<Question[]>("/truthQuestions.json")
+
+  const randomNumber = Math.floor(Math.random() * numOfTruthQuestions.value);
+
+  const randomQuestion = allTruthQuestions.value[randomNumber];
+  allTruthQuestions.value.splice(randomNumber, 1);
+
+  // console.assert(truthQuestions.value.length > 0, "No new truth questions remaining")
+
+  return randomQuestion;
+};
+
+const randomDareQuestion = () => {
+  const randomNumber = Math.floor(Math.random() * numOfDareQuestions.value);
+
+  const randomQuestion = allDareQuestions.value[randomNumber];
+  allDareQuestions.value.splice(randomNumber, 1);
+
+  // console.assert(dareQuestions.value.length > 0, "No new dare questions remaining" )
+
+  return randomQuestion;
 };
 </script>

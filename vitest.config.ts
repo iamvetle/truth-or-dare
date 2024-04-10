@@ -7,5 +7,5 @@ export default defineVitestConfig
         // dont know why this is recommended
         globals:true
     }
- // any custom Vitest config you require
+//  any custom Vitest config you require
 })
