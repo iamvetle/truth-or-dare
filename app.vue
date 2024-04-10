@@ -128,7 +128,7 @@ const dareButtonClick = async () => {
     backQuestions.value.push(theQuestion.value);
   }
   theQuestion.value = question;
-  mode.value = "truth";
+  mode.value = "dare";
 };
 
 // TODO - Make it so I can ask the questions in norwegian too
