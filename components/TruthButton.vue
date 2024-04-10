@@ -1,5 +1,6 @@
 <template>
         <button 
+        id="truth-choice-button"
         @click="$emit('buttonClick')"
         class=""
         >{{ label }}</button>

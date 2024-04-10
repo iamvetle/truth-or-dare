@@ -9,8 +9,8 @@
   <div
     class="bg-[#F0EDCC] w-full min-h-screen pt-12 px-2 flex flex-col mx-auto"
   >
-  <SpeedInsights/>
-  
+    <!-- <SpeedInsights /> -->
+
     <div class="space-y-2 w-fit mx-auto">
       <h1 class="text-3xl text-[#02343F] text-center font-bold">
         Truth or dare?
@@ -32,6 +32,7 @@
         :delay="200"
         :key="questionText"
       />
+      {{ questionText }}
 
       <!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
 
@@ -44,7 +45,7 @@
         <TruthButton
           :label="language === 'en' ? 'Truth' : 'Sannhet'"
           class="font-medium text-[#50586C] bg-[#DCE2F0] max-w-40 w-full h-16 rounded-md shadow-sm"
-          @buttonClick="truthButtonClick"
+          @button-click="truthButtonClick"
         />
         <DareButton
           :label="language === 'en' ? 'Dare' : 'Nødt'"
@@ -59,7 +60,7 @@
 
 <script setup lang="ts">
 import { slideVisibleLeft, slideVisibleRight } from "@vueuse/motion";
-import { SpeedInsights } from "@vercel/speed-insights/nuxt"
+// import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 
 type Question = {
   en: string;
@@ -80,9 +81,9 @@ const slideAnimation = computed(() =>
 const { randomTruthQuestion, randomDareQuestion, fetchAllQuestions } =
   await useQuestions();
 
-onMounted(async () => {
-  await fetchAllQuestions();
-});
+await fetchAllQuestions();
+
+theQuestion.value = await randomTruthQuestion();
 
 const truthButtonClick = async () => {
   const question = await randomTruthQuestion();
@@ -112,19 +113,19 @@ const dareButtonClick = async () => {
 };
 
 // TODO - Make it so I can ask the questions in norwegian too
-const languageText = computed(() =>
-  language.value === "en" ? "english" : "norsk"
-);
+// const languageText = computed(() =>
+//   language.value === "en" ? "english" : "norsk"
+// );
 const language = ref<"en" | "no">("en");
-const switchLanguage = () => {
-  if (language.value === "en") {
-    return (language.value = "no");
-  }
+// const switchLanguage = () => {
+//   if (language.value === "en") {
+//     return (language.value = "no");
+//   }
 
-  if (language.value === "no") {
-    return (language.value = "en");
-  }
-};
+//   if (language.value === "no") {
+//     return (language.value = "en");
+//   }
+// };
 
 const questionText = computed(() => {
   if (language.value === "en") {

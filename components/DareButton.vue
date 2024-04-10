@@ -1,5 +1,7 @@
 <template>
-    <button @click="$emit('buttonClick')" class="">{{ label }}</button>
+    <button 
+    id="dare-choice-button"
+    @click="$emit('buttonClick')" class="">{{ label }}</button>
 </template>
 
 <script setup lang='ts'>
