@@ -9,8 +9,8 @@
   <div
     class="bg-[#F0EDCC] w-full min-h-screen pt-12 px-2 flex flex-col mx-auto"
   >
-  <SpeedInsights/>
-  
+    <!-- <SpeedInsights /> -->
+
     <div class="space-y-2 w-fit mx-auto">
       <h1 class="text-3xl text-[#02343F] text-center font-bold">
         Truth or dare?
@@ -32,7 +32,6 @@
         :delay="200"
         :key="questionText"
       />
-
       <!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
 
       <div class="text-[#02343F] flex justify-between space-x-2 mt-7 text-sm">
@@ -44,12 +43,12 @@
         <TruthButton
           :label="language === 'en' ? 'Truth' : 'Sannhet'"
           class="font-medium text-[#50586C] bg-[#DCE2F0] max-w-40 w-full h-16 rounded-md shadow-sm"
-          @buttonClick="truthButtonClick"
+          @truth="truthButtonClick"
         />
         <DareButton
           :label="language === 'en' ? 'Dare' : 'Nødt'"
           class="font-medium text-[#9000FF] bg-[#FFE8F5] max-w-40 w-full h-16 rounded-md shadow-sm"
-          @button-click="dareButtonClick"
+          @dare="dareButtonClick"
         />
       </div>
     </div>
@@ -59,12 +58,20 @@
 
 <script setup lang="ts">
 import { slideVisibleLeft, slideVisibleRight } from "@vueuse/motion";
-import { SpeedInsights } from "@vercel/speed-insights/nuxt"
+import { fetchDareQuestions } from "./utils/fetchDareQuestions";
+import { fetchTruthQuestions } from "./utils/fetchTruthQuestions";
+// import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 
 type Question = {
   en: string;
   no: string;
 };
+
+const allDareQuestions = ref<Question[] | []>([]);
+const numOfDareQuestions = computed(() => allDareQuestions.value.length);
+
+const allTruthQuestions = ref<Question[] | []>([]);
+const numOfTruthQuestions = computed(() => allTruthQuestions.value.length);
 
 const theQuestion = ref<Question | null>(null);
 const backQuestions = ref<Question[] | []>([]);
@@ -77,15 +84,28 @@ const slideAnimation = computed(() =>
   slideDirection.value === "right" ? slideVisibleRight : slideVisibleLeft
 );
 
-const { randomTruthQuestion, randomDareQuestion, fetchAllQuestions } =
-  await useQuestions();
-
 onMounted(async () => {
-  await fetchAllQuestions();
+  allDareQuestions.value = await fetchDareQuestions();
+  allTruthQuestions.value = await fetchTruthQuestions();
+
+  console.log("app 91", allTruthQuestions.value)
+
+  if (allTruthQuestions.value.length > 1) {
+    console.log("api 94", allTruthQuestions.value)
+    console.log("api 98", theQuestion.value);
+
+
+    theQuestion.value = randomTruthQuestion();
+    console.log("api 97", theQuestion.value);
+    
+  }
+
 });
 
-const truthButtonClick = async () => {
-  const question = await randomTruthQuestion();
+const truthButtonClick = () => {
+  const question = randomTruthQuestion();
+
+  console.log(question)
 
   if (theQuestion.value != null) {
     slideDirection.value = "left";
@@ -98,8 +118,8 @@ const truthButtonClick = async () => {
   mode.value = "truth";
 };
 
-const dareButtonClick = async () => {
-  const question = await randomDareQuestion();
+const dareButtonClick = () => {
+  const question = randomDareQuestion();
 
   if (theQuestion.value != null) {
     slideDirection.value = "right";
@@ -108,23 +128,23 @@ const dareButtonClick = async () => {
     backQuestions.value.push(theQuestion.value);
   }
   theQuestion.value = question;
-  mode.value = "truth";
+  mode.value = "dare";
 };
 
 // TODO - Make it so I can ask the questions in norwegian too
-const languageText = computed(() =>
-  language.value === "en" ? "english" : "norsk"
-);
+// const languageText = computed(() =>
+//   language.value === "en" ? "english" : "norsk"
+// );
 const language = ref<"en" | "no">("en");
-const switchLanguage = () => {
-  if (language.value === "en") {
-    return (language.value = "no");
-  }
+// const switchLanguage = () => {
+//   if (language.value === "en") {
+//     return (language.value = "no");
+//   }
 
-  if (language.value === "no") {
-    return (language.value = "en");
-  }
-};
+//   if (language.value === "no") {
+//     return (language.value = "en");
+//   }
+// };
 
 const questionText = computed(() => {
   if (language.value === "en") {
@@ -146,7 +166,7 @@ const backToQuestion = () => {
   }
 };
 
-const forwardToQuestion = () => {
+function forwardToQuestion () {
   if (forwardQuestions.value.length > 0) {
     const forwardQuestion = forwardQuestions.value.pop() as Question;
     // updates the earlier questions
@@ -156,5 +176,29 @@ const forwardToQuestion = () => {
     // updates the current question
     theQuestion.value = forwardQuestion;
   }
+};
+
+function randomTruthQuestion () {
+  // const response = await $fetch<Question[]>("/truthQuestions.json")
+
+  const randomNumber = Math.floor(Math.random() * numOfTruthQuestions.value);
+
+  const randomQuestion = allTruthQuestions.value[randomNumber];
+  allTruthQuestions.value.splice(randomNumber, 1);
+
+  // console.assert(truthQuestions.value.length > 0, "No new truth questions remaining")
+
+  return randomQuestion;
+};
+
+const randomDareQuestion = () => {
+  const randomNumber = Math.floor(Math.random() * numOfDareQuestions.value);
+
+  const randomQuestion = allDareQuestions.value[randomNumber];
+  allDareQuestions.value.splice(randomNumber, 1);
+
+  // console.assert(dareQuestions.value.length > 0, "No new dare questions remaining" )
+
+  return randomQuestion;
 };
 </script>

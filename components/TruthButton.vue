@@ -1,6 +1,8 @@
 <template>
         <button 
-        @click="$emit('buttonClick')"
+        data-testid="truth-choice-button-test"
+        id="truth-choice-button"
+        @click="$emit('truth')"
         class=""
         >{{ label }}</button>
 </template>
@@ -13,6 +15,6 @@ withDefaults(defineProps<{
     label:"Truth"
 });
 
-defineEmits(["buttonClick"])
+defineEmits(["truth"])
 
 </script>

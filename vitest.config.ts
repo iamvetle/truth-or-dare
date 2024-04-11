@@ -3,5 +3,13 @@ import { defineVitestConfig
 
 export default defineVitestConfig
 ({
- // any custom Vitest config you require
+    test: {
+        // dont know why this is recommended
+        globals:true,
+        // alias: {
+        //     "/":"~/public"
+        // }
+    },
+    
+//  any custom Vitest config you require
 })
