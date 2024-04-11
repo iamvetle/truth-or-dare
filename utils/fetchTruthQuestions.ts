@@ -5,9 +5,9 @@ type Question = {
 
 export const fetchTruthQuestions = async () => {
   try {
-    const response = await $fetch<Question[] | null>("/truthQuestions.json");
-    if (response) {
-      return response;
+    const response = await fetch("/truthQuestions.json");
+    if (response.ok) {
+      return await response.json();
     }
     return [];
   } catch (e) {

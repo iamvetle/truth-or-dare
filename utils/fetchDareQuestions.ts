@@ -5,9 +5,9 @@ type Question = {
 
 export const fetchDareQuestions = async () => {
   try {
-    const response = await $fetch<Question[] | null>("/dareQuestions.json");
-    if (response) {
-      return response;
+    const response = await fetch('/dareQuestions.json');
+    if (response.ok) {
+      return await response.json();
     }
     return [];
   } catch (e) {
