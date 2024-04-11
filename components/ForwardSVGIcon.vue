@@ -5,7 +5,3 @@
             fill="#02343F" />
     </svg>
 </template>
-
-<script setup lang='ts'>
-
-</script>
