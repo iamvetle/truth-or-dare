@@ -43,12 +43,12 @@
         <TruthButton
           :label="language === 'en' ? 'Truth' : 'Sannhet'"
           class="font-medium text-[#50586C] bg-[#DCE2F0] max-w-40 w-full h-16 rounded-md shadow-sm"
-          @button-click="truthButtonClick"
+          @truth="truthButtonClick"
         />
         <DareButton
           :label="language === 'en' ? 'Dare' : 'Nødt'"
           class="font-medium text-[#9000FF] bg-[#FFE8F5] max-w-40 w-full h-16 rounded-md shadow-sm"
-          @button-click="dareButtonClick"
+          @dare="dareButtonClick"
         />
       </div>
     </div>
