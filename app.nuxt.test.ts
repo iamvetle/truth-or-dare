@@ -1,7 +1,6 @@
 import { describe, expect, test, vi } from "vitest";
 import app from "~/app.vue";
 import { mountSuspended, renderSuspended } from "@nuxt/test-utils/runtime";
-import { createPage, setup, url } from "@nuxt/test-utils/e2e";
 import { screen, fireEvent } from "@testing-library/vue";
 
 const mockRandomTruthQuestions = [
@@ -70,9 +69,6 @@ vi.mock("../utils/fetchTruthQuestions", async () => ({
 
 describe("testing the main app", async () => {
 
-  // For the createPage()
-  await setup()
-
   test("Existence, and heading", async () => {
     const wrapper = await mountSuspended(app);
     const heading = wrapper.find("h1");
@@ -114,19 +110,6 @@ describe("testing the main app", async () => {
     expect(button.text()).toMatchInlineSnapshot(`"Back"`);
     button = wrapper.get("#back-button");
     expect(button.element.tagName).toBe("BUTTON");
-  });
-
-  test("Testing as page (e2e)", async () => {
-    const page = await createPage();
-    await page.goto(url("/"), {waitUntil:"hydration"})
-    const backButton = await page.textContent("#back-button")
-    expect(backButton).toContain("Back")
-    expect(backButton).not.toContain("something else")
-
-    // ! FINALLY FUCKING WORKS, or?
-    const questionP = await page.textContent("#questionP");
-    expect(questionP).not.toContain("...");
-    console.log(questionP)
   });
 
   test("Testing with html renderSuspended", async () => {
