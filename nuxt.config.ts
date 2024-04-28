@@ -2,9 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-  '@nuxtjs/tailwindcss',
-  '@nuxt/test-utils/module',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/test-utils/module',
   '@vueuse/motion/nuxt'
   ]
 })
- 

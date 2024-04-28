@@ -1,8 +1,12 @@
 <template>
-    <button 
+  <button 
     id="dare-choice-button"
     data-testid="dare-choice-button-test"
-    @click="$emit('dare')" class="">{{ label }}</button>
+    class=""
+    @click="$emit('dare')"
+  >
+    {{ label }}
+  </button>
 </template>
 
 <script setup lang='ts'>

@@ -1,6 +1,9 @@
 <template>
   <div>
-    <button class="text-sm" @click="$emit('switchLanguage')">
+    <button
+      class="text-sm"
+      @click="$emit('switchLanguage')"
+    >
       Language:
       <span class="hover:cursor-pointer text-sm">{{
         language

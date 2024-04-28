@@ -1,9 +1,26 @@
 <template>
   <Head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png"
+    >
+    <link
+      rel="manifest"
+      href="/site.webmanifest"
+    >
   </Head>
 
   <div
@@ -26,11 +43,11 @@
       </div>
 
       <TheQuestion
+        :key="questionText"
+        v-motion="slideAnimation"
         :text="questionText"
         class="bg-white rounded-lg flex items-center justify-start min-h-64 w-full px-4"
-        v-motion="slideAnimation"
         :delay="200"
-        :key="questionText"
       />
       <!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
 
@@ -176,7 +193,7 @@ function forwardToQuestion () {
     // updates the current question
     theQuestion.value = forwardQuestion;
   }
-};
+}
 
 function randomTruthQuestion () {
   // const response = await $fetch<Question[]>("/truthQuestions.json")
@@ -189,7 +206,7 @@ function randomTruthQuestion () {
   // console.assert(truthQuestions.value.length > 0, "No new truth questions remaining")
 
   return randomQuestion;
-};
+}
 
 const randomDareQuestion = () => {
   const randomNumber = Math.floor(Math.random() * numOfDareQuestions.value);
