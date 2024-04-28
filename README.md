@@ -8,9 +8,9 @@ Project finished
 
 The tests are using the '@nuxt/test-utils/runtime' and 'vitest'. Also a few tests that check for emits/events use '@testing-library/vue'.
 
-I have unit tests for all/most components. I test for events. I am following best testing practices.
+There is unit tests for all/most components. Events are tested for. The tests are after best testing practices.
 
-I also have a end-to-end test with '@nuxt/test-utils/e2e' and playwright.
+There is also an end-to-end test with '@nuxt/test-utils/e2e' and playwright.
 
 **Coverage report from v8**
 
