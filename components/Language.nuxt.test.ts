@@ -2,7 +2,7 @@ import { test, describe, expect } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import Language from './Language.vue';
 
-let languageProp = "norsk"
+const languageProp = "norsk"
 
 describe("The back button", async () => {
 

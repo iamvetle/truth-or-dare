@@ -113,7 +113,7 @@ describe("testing the main app", async () => {
   });
 
   test("Testing with html renderSuspended", async () => {
-    let html = await renderSuspended(app)
+    const html = await renderSuspended(app)
 
     expect((html).getAllByTestId("dare-choice-button-test")).toMatchInlineSnapshot(`
       [
@@ -132,7 +132,7 @@ describe("testing the main app", async () => {
     await renderSuspended(app)
 
     let questionP = screen.getByTestId("questionP-test")
-    let questionPHTML = questionP.innerHTML
+    const questionPHTML = questionP.innerHTML
     console.log("before fireEvent", questionPHTML)
 
     const button = screen.getByTestId("dare-choice-button-test")
@@ -147,7 +147,7 @@ describe("testing the main app", async () => {
     await renderSuspended(app)
 
     let questionP = screen.getByTestId("questionP-test")
-    let questionPHTML = questionP.innerHTML
+    const questionPHTML = questionP.innerHTML
     console.log("before fireEvent", questionPHTML)
 
     const button = screen.getByTestId("truth-choice-button-test")
@@ -156,7 +156,6 @@ describe("testing the main app", async () => {
     questionP = screen.getByTestId("questionP-test")
     console.log("after fireEvent", questionPHTML)
     expect(questionP).not.toContainEqual(questionPHTML)
-    
   })
 
   

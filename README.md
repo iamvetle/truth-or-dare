@@ -8,9 +8,9 @@ Project finished
 
 The tests are using the '@nuxt/test-utils/runtime' and 'vitest'. Also a few tests that check for emits/events use '@testing-library/vue'.
 
-I have unit tests for all/most components. I test for events. I am following best testing practices.
+There is unit tests for all/most components. Events are tested for. The tests are after best testing practices.
 
-I also have a end-to-end test with '@nuxt/test-utils/e2e' and playwright.
+There is also an end-to-end test with '@nuxt/test-utils/e2e' and playwright.
 
 **Coverage report from v8**
 
@@ -37,10 +37,10 @@ All files                 |   76.29 |    69.23 |   66.66 |   76.29 |
 
 ### Dockerization
 
-I am able to dockerize the app. I have a Dockerfile that works, and that I can use to dockerize the application. It is possible for me to deploy it on Google Cloud. (I think I have it deployed on google cloud).
+The app can be dockerized. The Dockerfile works, and can be used to dockerize the application. It is possible to deploy it on Google Cloud.
 
 ---
 
 ### Production
 
-I can generate the app as a static website, and deploy it on for example vercel. (Which I think I have done)
+The app can be generated as a static website with ```nuxi generate```, and deployed on for example vercel.

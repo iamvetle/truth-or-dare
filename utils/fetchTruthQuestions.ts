@@ -1,8 +1,3 @@
-type Question = {
-  en: string;
-  no: string;
-};
-
 export const fetchTruthQuestions = async () => {
   try {
     const response = await fetch("/truthQuestions.json");

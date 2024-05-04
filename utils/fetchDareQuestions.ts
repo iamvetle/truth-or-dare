@@ -1,8 +1,3 @@
-type Question = {
-  en: string;
-  no: string;
-};
-
 export const fetchDareQuestions = async () => {
   try {
     const response = await fetch('/dareQuestions.json');

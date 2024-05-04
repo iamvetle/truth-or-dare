@@ -7,7 +7,7 @@ describe("The back button", async () => {
     test("Should match snapshot", async () => {
         const wrapper = await mountSuspended(TruthButton)
         expect(wrapper.exists()).toBe(true)
-        expect(wrapper.html()).toMatchInlineSnapshot(`"<button data-testid="truth-choice-button-test" id="truth-choice-button" class="">Truth</button>"`)
+        expect(wrapper.html()).toMatchInlineSnapshot(`"<button id="truth-choice-button" data-testid="truth-choice-button-test" class="">Truth</button>"`)
     })
     test("Should emit when button is clicked", async () => {
         const wrapper = await mountSuspended(TruthButton)
