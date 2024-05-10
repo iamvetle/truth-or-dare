@@ -6,7 +6,7 @@
 			<!-- <SpeedInsights /> -->
 
 			<div class="space-y-2 w-fit mx-auto">
-				<h1 class="text-3xl text-[#02343F] text-center font-bold">
+				<h1 data-testid="the_heading" class="text-3xl text-[#02343F] text-center font-bold">
 					Truth or dare?
 				</h1>
 			</div>
