@@ -35,7 +35,6 @@
 					class="bg-white rounded-lg flex items-center justify-start min-h-64 w-full px-4"
 					:key="questionText"
 				/>
-				<!-- <p v-if="theQuestion" class="break-words">{{ questionText }}</p> -->
 
 				<div
 					class="text-[#02343F] flex justify-between space-x-2 mt-7 text-sm"
