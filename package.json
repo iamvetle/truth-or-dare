@@ -14,7 +14,9 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.0",
     "@vercel/speed-insights": "^1.0.10",
+    "@vite-pwa/nuxt": "^0.8.0",
     "@vueuse/motion": "^2.1.0",
     "nuxt": "^3.11.2",
     "vue": "^3.4.21",
@@ -22,7 +24,6 @@
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.12.1",
-    "@nuxtjs/tailwindcss": "^6.11.4",
     "@playwright/test": "^1.44.0",
     "@testing-library/vue": "^8.0.3",
     "@vitest/coverage-v8": "^1.4.0",
